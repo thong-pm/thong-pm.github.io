@@ -123,6 +123,8 @@ input, select, textarea {
 		}
 		:link {
 			text-decoration: none;
+			outline: none;
+			border: none;
 		}
 
 	strong, b {
@@ -2038,7 +2040,7 @@ input, select, textarea {
 			font-weight: 900;
 		}
 
-		.icon.brands:before {
+		.icon.fa-brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
 

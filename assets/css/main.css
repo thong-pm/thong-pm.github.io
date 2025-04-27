@@ -72,6 +72,85 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Reels */
+
+.work-item .reel-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border: 0.75px solid #333;
+    border-radius: 15px;
+    margin: 0 0 2em 0;
+    --image-count: 4;
+    --display-time: 3s;
+    --fade-time: 1s;
+    --image-cycle: 4s;
+    --total-duration: calc(var(--image-count) * var(--image-cycle));
+}
+
+.reel-slider a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%; /* Fit within container height */
+    width: 650px;
+    height: auto;
+    object-fit: contain; /* Show entire image without cropping */
+    opacity: 0;
+    animation: reel-fade var(--total-duration) infinite;
+    animation-delay: calc(var(--index) * var(--image-cycle));
+
+}
+.reel-slider a.clicked {
+    opacity: 1 !important; /* Make clicked image visible */
+    z-index: 3; /* Bring it to the front */
+    animation: none; /* Pause the animation */
+}
+
+.reel-slider img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* Always visible navigation buttons at the bottom */
+.reel-slider .nav-buttons {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 3;
+}
+
+/* Adding keyframe to the clickable navigation */
+@keyframes reel-fade {
+    0% { opacity: 0; z-index: 1; pointer-events: none; }
+    6.25% { opacity: 1; z-index: 2; pointer-events: auto; }
+    18.75% { opacity: 1; z-index: 2; pointer-events: auto; }
+    25% { opacity: 0; z-index: 1; pointer-events: none; }
+    100% { opacity: 0; z-index: 1; pointer-events: none; }
+}
+
+/* Style each image element individually */
+.reel-slider a:nth-child(1) { --index: 0; }
+.reel-slider a:nth-child(2) { --index: 1; }
+.reel-slider a:nth-child(3) { --index: 2; }
+.reel-slider a:nth-child(4) { --index: 3; }
+
+
+
 /* Basic */
 
 	html {
@@ -1776,7 +1855,11 @@ input, select, textarea {
 	header p {
 		color: #b2b2b2;
 		position: relative;
-		margin: 0 0 1.5em 1em;
+		margin: 0 0 2em 3em;
+		text-align: center;
+		line-height: 1.8em;
+		font-size: 0.6em;
+		font-family: 'Helvetica', sans-serif;
 	}
 
 	header h2 + p {
@@ -1801,7 +1884,7 @@ input, select, textarea {
 
 	header.major h2 {
 		font-size: 2em;
-		padding: 0em 3em 0em 0.25em;
+		padding: 0em 1em 0em 0.25em;
 	}
 
 /* Form */
@@ -2141,7 +2224,7 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
-				height: 15rem;
+				/* height: 15rem; */
 				object-fit: cover;
 				
 			}
@@ -2619,7 +2702,7 @@ input, select, textarea {
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 25%;
+		width: 22%;
 	}
 
 		#header > * {
@@ -2649,7 +2732,7 @@ input, select, textarea {
 		#header h1 {
 			color: rgba(255, 255, 255, 0.5);
 			font-size: 1.5em;
-			line-height: 1.75em;
+			line-height: 1.5em;
 			margin: 0;
 		}
 
@@ -2697,7 +2780,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		margin-left: 20%;
+		margin-left: 15%;
 		max-width: 100em;
 		padding: 3em 12em;
 		width: calc(100% - 15%);

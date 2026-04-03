@@ -1,35 +1,19 @@
-The layout of the site have been using the template below:
+# Thong Pham - Dashboard Developer Portfolio
 
-Strata by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Welcome to the repository for my personal portfolio website! This site serves as a showcase of my work in data analytics and engineering, focusing particularly on Power BI dashboards on MS Fabric.
 
+## Live Site
+Visit the portfolio here: https://thong-pm.github.io
 
-A simple, minimalist template that actually began life as an unused redesign of my
-personal site. Includes a (configurable) parallax background effect, Poptrox-powered
-lightbox gallery, a bunch of pre-styled elements, and Sass sources for the Sass-inclined.
+## What is showcased here
+- **Interactive Dashboards:** Real-world and sample Power BI dashboards analyzing business, vehicle performance, and dynamic inventory (utilizing DAX and Power Query).
+- **Data Pipelines:** Multi-platform orchestration incorporating Singer SDK, Postgres, dbt, and Python.
+- **Data Transformation:** Processing and reshaping datasets using Python pandas and Excel.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## Repository Contents
+- `index.html` - The main layout and content of the portfolio.
+- `assets/` - CSS styling, scripts, and libraries.
+- `images/` - Portfolio thumbnails and icons.
 
-(* = Not included)
-
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
-
-AJ
-aj@lkn.io | @ajlkn
-
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+## Credits
+The static site design is customized from the "Strata" template by HTML5 UP (html5up.net), which is available under the CCA 3.0 license.

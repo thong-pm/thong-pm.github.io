@@ -86,7 +86,7 @@ input, select, textarea {
     background-color: #f0f0f0;
     border: 0.75px solid #333;
     border-radius: 15px;
-    margin: 0 0 2em 0;
+    margin: 0 auto 2em auto;
     --image-count: 4;
     --display-time: 3s;
     --fade-time: 1s;
@@ -131,7 +131,13 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 20px;
     z-index: 3;
+}
+
+.nav-buttons {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 /* Adding keyframe to the clickable navigation */
@@ -150,6 +156,39 @@ input, select, textarea {
 .reel-slider a:nth-child(4) { --index: 3; }
 
 
+
+.work-item .project-image-box {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border: 0.75px solid #333;
+    border-radius: 15px;
+    margin: 0 auto 2em auto;
+}
+
+.project-image-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: none;
+}
+
+.project-image-box img {
+    max-width: 95%; /* Leave a small margin */
+    max-height: 95%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
 
 /* Basic */
 
@@ -1855,12 +1894,12 @@ input, select, textarea {
 	header p {
 		color: #b2b2b2;
 		position: relative;
-		margin: 0 0 2em 3em;
-		text-align: center;
+		margin: 0 0 2em 0;
 		line-height: 1.8em;
 		font-size: 0.6em;
 		font-family: 'Helvetica', sans-serif;
 	}
+
 
 	header h2 + p {
 		font-size: 1.2em;
@@ -1884,7 +1923,7 @@ input, select, textarea {
 
 	header.major h2 {
 		font-size: 2em;
-		padding: 0em 1em 0em 0.25em;
+		padding: 0;
 	}
 
 /* Form */
@@ -2705,6 +2744,41 @@ input, select, textarea {
 		width: 22%;
 	}
 
+	@media screen and (min-width: 981px) {
+		#header .inner {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			width: max-content;
+			max-width: 100%;
+			margin-left: auto;
+		}
+
+		#header .inner > div {
+			width: 0;
+			min-width: 100%;
+			text-align: right;
+			margin-left: 0;
+			padding-left: 0;
+			padding-top: 2em;
+		}
+
+
+		#header .inner > div p {
+			text-align: right;
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+		}
+
+
+	}
+
+
+
+
+
+
 		#header > * {
 			-moz-flex-shrink: 0;
 			-webkit-flex-shrink: 0;
@@ -2746,6 +2820,12 @@ input, select, textarea {
 	#footer .icons {
 		margin: 1em 0 0 0;
 	}
+
+		#footer .icons img[alt="Upwork"],
+		#footer .icons img[alt="Youtube"] {
+			filter: brightness(0) invert(1);
+		}
+
 
 		#footer .icons a {
 			color: rgba(255, 255, 255, 0.4);
@@ -3171,6 +3251,25 @@ input, select, textarea {
 						display: inline;
 					}
 
+				#header .inner > div {
+					max-width: 18em;
+					margin: 0 auto;
+					text-align: center;
+					padding-top: 2em;
+				}
+
+				#header .inner > div p {
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					font-size: 14px;
+				}
+
+
+
+
+
+
 		/* Footer */
 
 			#footer {
@@ -3192,6 +3291,12 @@ input, select, textarea {
 					margin: 0 0 1em 0;
 				}
 
+				#footer .icons img[alt="Upwork"],
+				#footer .icons img[alt="Youtube"] {
+					filter: brightness(0) invert(1);
+				}
+
+
 				#footer .copyright {
 					margin: 0 0 1em 0;
 				}
@@ -3211,6 +3316,16 @@ input, select, textarea {
 				padding: 6em 4em;
 				width: 100%;
 			}
+
+			#main > section:not(#four) {
+				text-align: center;
+			}
+
+			#four {
+				text-align: left;
+			}
+
+
 
 	}
 
@@ -3240,7 +3355,8 @@ input, select, textarea {
 
 			header.major h2 {
 				font-size: 1.35em;
-				padding: 0 10em;
+				padding: 0;
+				text-align: center;
 			}
 
 		/* List */
@@ -3263,6 +3379,26 @@ input, select, textarea {
 					font-size: 1.35em;
 				}
 
+				#header .inner > div {
+					max-width: 18em;
+					margin: 0 auto;
+					text-align: center;
+					padding-top: 2em;
+				}
+
+
+				#header .inner > div p {
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					font-size: 12px;
+				}
+
+
+
+
+
+
 		/* Footer */
 
 			#footer {
@@ -3274,6 +3410,16 @@ input, select, textarea {
 			#main {
 				padding: 2.25em 1.5em 0.25em 1.5em;
 			}
+
+			#main > section:not(#four) {
+				text-align: center;
+			}
+
+			#four {
+				text-align: left;
+			}
+
+
 
 				#main > section {
 					margin: 1em 0 0 0;

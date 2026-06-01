@@ -2749,7 +2749,7 @@ input, select, textarea {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
-			width: max-content;
+			width: 100%;
 			max-width: 100%;
 			margin-left: auto;
 		}
@@ -3252,7 +3252,7 @@ input, select, textarea {
 					}
 
 				#header .inner > div {
-					max-width: 18em;
+					max-width: 27em;
 					margin: 0 auto;
 					text-align: center;
 					padding-top: 2em;
@@ -3261,7 +3261,7 @@ input, select, textarea {
 				#header .inner > div p {
 					margin: 0;
 					padding: 0;
-					text-align: center;
+					text-align: right;
 					font-size: 14px;
 				}
 
@@ -3380,7 +3380,7 @@ input, select, textarea {
 				}
 
 				#header .inner > div {
-					max-width: 18em;
+					max-width: 27em;
 					margin: 0 auto;
 					text-align: center;
 					padding-top: 2em;
@@ -3390,7 +3390,7 @@ input, select, textarea {
 				#header .inner > div p {
 					margin: 0;
 					padding: 0;
-					text-align: center;
+					text-align: right;
 					font-size: 12px;
 				}
 
